@@ -13,9 +13,6 @@ following 🎨 [Catppuccin](https://catppuccin.com) palettes:
 To set up these dotfiles, follow these steps:
 
 ```bash
-git clone https://github.com/VioletCranberry/dotfiles.git && cd dotfiles
-./00_misc.sh
-./01_terminal.sh
-./02_neovim.sh
-# Continue with the remaining scripts 🚀
+git clone https://github.com/VioletCranberry/dotfiles.git
+cd dotfiles && ./install.sh
 ```

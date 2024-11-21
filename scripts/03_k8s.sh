@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC1091
-source ./utils.sh
+source "$(git rev-parse --show-toplevel)/scripts/utils.sh"
 
 # https://github.com/derailed/k9s
 
