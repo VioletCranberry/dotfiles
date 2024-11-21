@@ -16,3 +16,14 @@ To set up these dotfiles, follow these steps:
 git clone https://github.com/VioletCranberry/dotfiles.git
 cd dotfiles && ./install.sh
 ```
+
+## 📝 Tooling Included
+
+- [Wezterm](https://wezfurlong.org/wezterm/) as the terminal emulator.
+- [Tmux](https://github.com/tmux/tmux) as the terminal multiplexer.
+- [Oh My Zsh](https://ohmyz.sh/) with [Zinit](https://github.com/zdharma-continuum/zinit) as the plugin manager.
+- [Starship](https://starship.rs/) as the prompt.
+- [Neovim](https://neovim.io) setup powered by 💤[LazyVim](https://github.com/LazyVim/LazyVim).
+- ...
+- ...
+- And more!
