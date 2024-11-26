@@ -90,6 +90,6 @@ alias lla='eza -lga --icons --color=always'
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 export KUBE_EDITOR='nvim'
-export K9S_CONFIG_DIR="$HOME/.config/k9s/"
+export K9S_CONFIG_DIR="$HOME/.config/k9s"
 export GPG_TTY=$TTY
 export BAT_THEME="Catppuccin Frappe"

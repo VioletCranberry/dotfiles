@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 doIt() {
   ./scripts/01_terminal.sh
