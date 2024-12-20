@@ -8,7 +8,7 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      ensure_installed = { "shellcheck", "shfmt" },
+      ensure_installed = { "shellcheck", "shfmt", "bash-language-server" },
     },
   },
   {

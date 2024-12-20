@@ -11,7 +11,7 @@ fi
 cargo install --locked tree-sitter-cli
 
 brew install neovim \
-  ripgrep fd tree-sitter
+  ripgrep fd tree-sitter node
 
 cfg_dir="$(repo_cfgdir 'neovim' || exit 1)"
 create_symlink "$cfg_dir" "$HOME/.config/nvim"
