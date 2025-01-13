@@ -19,9 +19,6 @@ cd dotfiles && ./install.sh
 
 ## 📝 Tooling Included
 
-~~ - [Wezterm](https://wezfurlong.org/wezterm/) as the terminal emulator. ~~
-~~ - [Tmux](https://github.com/tmux/tmux) as the terminal multiplexer. ~~
-
 - [Ghostty](https://ghostty.org) as the terminal emulator.
 - [Oh My Zsh](https://ohmyz.sh/) with [Zinit](https://github.com/zdharma-continuum/zinit) as the plugin manager.
 - [Starship](https://starship.rs/) as the prompt.
