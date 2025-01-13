@@ -4,29 +4,35 @@ source "$(git rev-parse --show-toplevel)/scripts/utils.sh"
 
 # https://github.com/ohmyzsh/ohmyzsh
 # https://github.com/starship/starship
-# https://github.com/wez/wezterm
+# https://ghostty.org
 
 # Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# Install wezterm and fonts
-brew install --cask font-jetbrains-mono-nerd-font wezterm
+# Install ghostty and fonts
+brew install --cask font-jetbrains-mono-nerd-font ghostty
 
-dotfiles=(
-  ".wezterm.lua"
-  ".zshrc"
-  ".tmux.conf"
-)
+# dotfiles=(
+#   ".wezterm.lua"
+#   ".zshrc"
+#   ".tmux.conf"
+# )
 
-for file in "${dotfiles[@]}"; do
-  cfg_file="$(repo_dotfile "$file" || exit 1)"
-  create_symlink "$cfg_file" "$HOME/$file"
-done
+# for file in "${dotfiles[@]}"; do
+#   cfg_file="$(repo_dotfile "$file" || exit 1)"
+#   create_symlink "$cfg_file" "$HOME/$file"
+# done
+
+cfg_file="$(repo_dotfile ".zshrc" || exit 1)"
+create_symlink "$cfg_file" "$HOME/$cfg_file"
 
 cfg_file="$(repo_cfgfile 'starship.toml' || exit 1)"
 create_symlink "$cfg_file" "$HOME/.config/starship.toml"
+
+cfg_file="$(repo_cfgfile 'ghostty' || exit 1)"
+create_symlink "$cfg_file" "$HOME/.config/ghostty/config"
 
 # https://github.com/tmux/tmux
 # https://github.com/junegunn/fzf
@@ -38,4 +44,4 @@ create_symlink "$cfg_file" "$HOME/.config/starship.toml"
 
 # https://www.gnu.org/software/coreutils/
 
-brew install tmux fzf zoxide eza jq yq coreutils lazygit
+brew install fzf zoxide eza jq yq coreutils lazygit

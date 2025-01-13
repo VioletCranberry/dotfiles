@@ -50,11 +50,22 @@ function backup_if_exists() {
 function create_symlink() {
   local -r source_file="$1"
   local -r target_file="$2"
+
+  # Ensure the parent directory for the target file exists
+  local target_dir
+  target_dir=$(dirname "$target_file")
+  if [ ! -d "$target_dir" ]; then
+    echo "Creating parent directories: $target_dir"
+    mkdir -p "$target_dir"
+  fi
+
   if [ -L "$target_file" ]; then
-    echo "$target_file is already a symlink. Updating the symlink." && rm "$target_file"
+    echo "$target_file is already a symlink. Updating the symlink."
+    rm "$target_file"
   else
     backup_if_exists "$target_file"
   fi
+
   ln -s "$source_file" "$target_file"
   echo "Symlink created: $source_file -> $target_file"
 }
