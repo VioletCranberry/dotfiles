@@ -14,19 +14,16 @@ fi
 # Install ghostty and fonts
 brew install --cask font-jetbrains-mono-nerd-font ghostty
 
-# dotfiles=(
-#   ".wezterm.lua"
-#   ".zshrc"
-#   ".tmux.conf"
-# )
+dotfiles=(
+  #   ".wezterm.lua"
+  ".zshrc"
+  ".tmux.conf"
+)
 
-# for file in "${dotfiles[@]}"; do
-#   cfg_file="$(repo_dotfile "$file" || exit 1)"
-#   create_symlink "$cfg_file" "$HOME/$file"
-# done
-
-cfg_file="$(repo_dotfile ".zshrc" || exit 1)"
-create_symlink "$cfg_file" "$HOME/$cfg_file"
+for file in "${dotfiles[@]}"; do
+  cfg_file="$(repo_dotfile "$file" || exit 1)"
+  create_symlink "$cfg_file" "$HOME/$file"
+done
 
 cfg_file="$(repo_cfgfile 'starship.toml' || exit 1)"
 create_symlink "$cfg_file" "$HOME/.config/starship.toml"

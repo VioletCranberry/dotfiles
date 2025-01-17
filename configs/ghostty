@@ -1,3 +1,5 @@
 font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-size = 14
 theme = "dark:catppuccin-frappe,light:catppuccin-latte"
+macos-titlebar-style = tabs
+command = /bin/zsh -l -c "tmux a || tmux"
